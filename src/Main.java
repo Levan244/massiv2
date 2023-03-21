@@ -33,20 +33,18 @@ public class Main {
     public static void task2() {
         System.out.println("Задание 2");
         int[] arr = generateRandomArray();
-        int maxSalary = 99_000;
-        int minSalary = 200_001;
+        arr[0] = 99_000;
+        arr[1] = 200_001;
 
         for (int money :arr) {
-            if (money > maxSalary ){
-                maxSalary = money;
-
+            if (money > arr[0] ){
+                arr[0] = money;
             }
-            if (money < minSalary ){
-                minSalary = money;
+            if (money < arr[1] ){
+                arr[1] = money;
             }
         }
-        System.out.println("Минимальная сумма трат за день составила "+ minSalary + " рублей.Максимальная сумма трат за день составила" + maxSalary + "… рублей");
-
+        System.out.println("Минимальная сумма трат за день составила "+ arr[1] + " рублей.Максимальная сумма трат за день составила" + arr[0] + "… рублей");
     }
 
     public static void task3() {
@@ -65,10 +63,7 @@ public class Main {
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1 ; i >= 0 ; i--) {
             System.out.print(reverseFullName[i]);
-            
         }
-
-
     }
 
 }
