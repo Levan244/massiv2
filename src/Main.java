@@ -33,18 +33,18 @@ public class Main {
     public static void task2() {
         System.out.println("Задание 2");
         int[] arr = generateRandomArray();
-        arr[0] = 99_000;
-        arr[1] = 200_001;
+        int maxSalary = arr[0];
+        int minSalary = arr[0];
 
         for (int money :arr) {
-            if (money > arr[0] ){
-                arr[0] = money;
+            if (money > maxSalary ){
+                maxSalary = money;
             }
-            if (money < arr[1] ){
-                arr[1] = money;
+            if (money < minSalary ){
+                minSalary = money;
             }
         }
-        System.out.println("Минимальная сумма трат за день составила "+ arr[1] + " рублей.Максимальная сумма трат за день составила" + arr[0] + "… рублей");
+        System.out.println("Минимальная сумма трат за день составила "+ minSalary + " рублей.Максимальная сумма трат за день составила " + maxSalary + " рублей");
     }
 
     public static void task3() {
